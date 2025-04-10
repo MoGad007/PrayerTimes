@@ -391,6 +391,58 @@ main {
           }
         }
 
+         & > .next-prayer {
+          gap: 5px;
+          background-color: var(--green3);
+          border-radius: var(--border-rad);
+          padding: var(--padding);
+          align-items: center;
+          justify-content: center;
+          white-space: normal;
+
+          & > .prayer-name {
+            font-size: 4.5rem;
+            margin-block-end: 15px;
+          }
+
+          & > .txt {
+            color: var(--white-col);
+          }
+
+          & > .clock.counter-down {
+            font-size: 2.5rem;
+            direction: ltr;
+
+            &.blink {
+              color: var(--orange1);
+              animation: blink infinite ease 700ms alternate;
+            }
+
+            & > * {
+              width: 45px;
+            }
+          }
+
+           @container html (inline-size < 870px) {
+          .next-prayer {
+            & > .prayer-name {
+              font-size: calc(1.5rem + 2vw);
+            }
+
+            & > .txt {
+              font-size: calc(0.6rem + 0.5vw);
+            }
+
+            & > .clock.counter-down {
+              font-size: 1.2rem;
+
+              & > * {
+                width: 20px;
+              }
+            }
+          }
+        }
+
         & > .prayers {
           gap: 10px;
 
